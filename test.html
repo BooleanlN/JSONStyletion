@@ -15,17 +15,19 @@
   "name2": [
   1,
   "a",
+  [1,
   [1,2,3,4],
+  3,4],
   {
   "operatorId": "cs1111",
   "name2": [
   1,
   2,
-  [1,2,3,4]
+  [1,2,null,4]
   ]
   }
   ],
-  "operRank": "2",
+  "operRank": null,
   "operStatus": "1",
   "cellPhone": "13874900776",
   "officePhone": "",
@@ -49,7 +51,8 @@
   var jsontext = ele.innerHTML;
   json = JSON.parse(jsontext);
   ele.innerHTML = "";
-  ele.appendChild(styleition(json));
+//  console.log(json.stylietion())
+  ele.appendChild(json.stylietion());
 </script>
 </body>
 </html>
