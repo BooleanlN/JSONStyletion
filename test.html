@@ -21,7 +21,7 @@
   {
   "operatorId": "cs1111",
   "name2": [
-  1,
+  1,2,
   2,
   [1,2,null,4]
   ]
@@ -47,12 +47,7 @@
 </div>
 <script src="./JSONStyletion.js"></script>
 <script>
-  var ele = document.getElementById("test");
-  var jsontext = ele.innerHTML;
-  json = JSON.parse(jsontext);
-  ele.innerHTML = "";
-//  console.log(json.stylietion())
-  ele.appendChild(json.stylietion());
+  stylietion(document.getElementById("test"));
 </script>
 </body>
 </html>

@@ -1,9 +1,15 @@
 /**
  * Created by chenkuan on 16/3/11.
  */
-JSON.constructor.prototype.stylietion = function(){
-
-    return styleition(this,null,true);
+window.stylietion = function(ele){
+    var text = ele.innerHTML;
+    try{
+        var json = JSON.parse(text);
+        ele.innerHTML = '';
+        ele.appendChild(styleition(json,null,true));
+    }catch (e){
+        ele.innerHTML = "============== JSON 格式不正确==================\n<br>"+text;
+    }
 
     function styleition(json,key,isLastEle){
         var indent = '48px';// 缩进宽度
