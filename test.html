@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+<div id="test">
+  {
+  "operator": {
+
+  "id": null,
+  "operatorId": "cs1111",
+  "name2": [
+  1,
+  "a",
+  [1,2,3,4],
+  {
+  "operatorId": "cs1111",
+  "name2": [
+  1,
+  2,
+  [1,2,3,4]
+  ]
+  }
+  ],
+  "operRank": "2",
+  "operStatus": "1",
+  "cellPhone": "13874900776",
+  "officePhone": "",
+  "email": "393667111@qq.com",
+  "provinceId": "1",
+  "effctiveDate": "",
+  "expiryDate": "",
+  "passDisableDay": "300",
+  "operDesc": "测试",
+  "name": [
+  1,
+  "a",
+  [1,2,3,4]
+  ]
+  }
+  }
+</div>
+<script src="./JSONStyletion.js"></script>
+<script>
+  var ele = document.getElementById("test");
+  var jsontext = ele.innerHTML;
+  json = JSON.parse(jsontext);
+  ele.innerHTML = "";
+  ele.appendChild(styleition(json));
+</script>
+</body>
+</html>
